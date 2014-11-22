@@ -11,8 +11,9 @@ hg_ps1() {
     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
     }
 
-# export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
-export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
-export PATH="$HOME/.dotfiles/.ruby/rbenv/bin:$PATH"
+export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
+#export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
+export RBENV_ROOT=$HOME/.dotfiles/.ruby/rbenv
+export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
