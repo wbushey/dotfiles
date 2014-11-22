@@ -25,6 +25,11 @@ Also includes the following submodules:
 
 - [rbenv](https://github.com/sstephenson/rbenv)
 
+Unfortunately, rbenv's gitignore prevents adding the following as submodules of this repo
+
+- [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
+- [ruby-build](https://github.com/sstephenson/ruby-build)
+
 ## Vim
 
 - [vim](http://www.vim.org/) (>= 7.3.584 for YouCompleteMe)
