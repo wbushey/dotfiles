@@ -13,6 +13,6 @@ hg_ps1() {
 
 # export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
 export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.dotfiles/.ruby/rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 

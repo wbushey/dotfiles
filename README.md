@@ -2,8 +2,10 @@
 
 Common *nix config files that I like to customize. 
 
-Also includes the following vim bundles:
+Also includes the following submodules:
 
+- [hg-prompt](https://github.com/pelletier/hg-prompt)
+- [rbenv](https://github.com/sstephenson/rbenv)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)

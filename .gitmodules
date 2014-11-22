@@ -10,3 +10,6 @@
 [submodule ".hg/hg-prompt"]
 	path = .hg/hg-prompt
 	url = https://github.com/pelletier/hg-prompt.git
+[submodule ".ruby/rbenv"]
+	path = .ruby/rbenv
+	url = https://github.com/sstephenson/rbenv
