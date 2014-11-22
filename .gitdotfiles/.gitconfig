@@ -1,0 +1,9 @@
+[user]
+	name = Bill Bushey
+	email = wbushey@gmail.com
+[push]
+	default = matching
+[core]
+	excludesfile = .gitignore
+[diff]
+	submodule = log

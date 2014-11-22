@@ -49,13 +49,18 @@ Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
     source ~/.dotfiles/.bashrc
 
-Edit ~/.vimrc to include the following
+Edit ~/.gitconfig to include the following
 
-    source ~/.dotfiles/.vimrc
+    [include]
+        path = ~/.dotfiles/.gitdotfiles/.gitconfig
 
 Edit ~/.hgrc to include the following
 
     %include ~/.dotfiles/.hgrc
+
+Edit ~/.vimrc to include the following
+
+    source ~/.dotfiles/.vimrc
 
 
 # Updating
