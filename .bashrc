@@ -1,7 +1,7 @@
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Add Git and Mercurial repo status to the prompt
-source $HOME/.dotfiles/.git-prompt.sh
+source $HOME/.dotfiles/.gitdotfiles/.git-prompt.sh
 
 GIT_PS1_SHOWDIRTYSTATE='True'
 GIT_PS1_SHOWUNTRACKEDFILES='True'
