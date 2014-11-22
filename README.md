@@ -27,7 +27,9 @@ the repo specificly.
 ## Python
 
 - [virturlenv](http://virtualenv.readthedocs.org/)
+  sudo pip install virtualenv
 - [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/)
+  sudo pip install virtualenvwrapper
 
 ## Ruby
 
