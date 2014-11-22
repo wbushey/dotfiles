@@ -51,7 +51,12 @@ Unfortunately, rbenv's gitignore prevents adding the following as submodules of 
 
     cd ~
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
-    sudo .vim/bundle/YouCompleteMe/install.sh --clang-completer
+    sudo .vim/bundle/YouCompleteMe/install.sh
+
+Add the --clang-completer option to install.sh above to include support for C autocompletion.
+This will require GLIBC >= 2.14
+
+Also git clone the appropriate rbenv plugins
 
 Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
@@ -77,4 +82,4 @@ Submodules are used to include many other projects. To update the included
 submodules, simple run the following in the repo
 
     git submodule update --recursive
-    sudo .vim/bundle/YouCompleteMe/install.sh --clang-completer
+    sudo .vim/bundle/YouCompleteMe/install.sh
