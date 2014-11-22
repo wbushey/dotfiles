@@ -1,0 +1,8 @@
+[ui]
+username = wbushey <wbushey@gmail.com>
+
+[hostfingerprints]
+source.iopen.net = CE:CC:DF:DF:E6:32:89:E3:8A:CD:0B:A1:8F:15:FC:B7:0A:AC:23:D3
+
+[extensions]
+prompt = ~/.dotfiles/.hg/hg-prompt/prompt.py

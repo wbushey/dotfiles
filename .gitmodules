@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".hg/hg-prompt"]
+	path = .hg/hg-prompt
+	url = https://github.com/pelletier/hg-prompt.git
