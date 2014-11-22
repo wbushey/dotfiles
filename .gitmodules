@@ -7,10 +7,10 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule ".hgdotfiles/hg-prompt"]
-	path = .hgdotfiles/hg-prompt
-	url = https://github.com/pelletier/hg-prompt.git
-    ignore = all 
 [submodule ".ruby/rbenv"]
 	path = .ruby/rbenv
 	url = https://github.com/sstephenson/rbenv
+[submodule ".hgdotfiles/hg-prompt"]
+	path = .hgdotfiles/hg-prompt
+	url = https://github.com/pelletier/hg-prompt.git
+    ignore = all
