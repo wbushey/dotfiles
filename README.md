@@ -69,7 +69,7 @@ Edit ~/.gitconfig to include the following
 
 Edit ~/.hgrc to include the following
 
-    %include ~/.dotfiles/.hgrc
+    %include ~/.dotfiles/.hgdotfiles/.hgrc
 
 Edit ~/.vimrc to include the following
 
