@@ -1,7 +1,7 @@
 # Installation
 
     cd ~
-    git clone https://github.com/wbushey/vimrc.git .dotfiles
+    git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
 
 Edit ~/.vimrc to include the following
 
