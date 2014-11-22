@@ -10,5 +10,7 @@ Edit ~/.vimrc to include the following
 # Dependencies
 
 ## Vim
-[Pathogyn](https://github.com/tpope/vim-pathogen)
-[vim-markdown](https://github.com/plasticboy/vim-markdown)
+- [Pathogen](https://github.com/tpope/vim-pathogen)
+- [flake8](https://pypi.python.org/pypi/flake8)
+- [vim-flake8](https://github.com/nvie/vim-flake8)
+- [vim-markdown](https://github.com/plasticboy/vim-markdown)
