@@ -10,6 +10,14 @@ Also includes the following submodules:
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
 
+# Notes
+
+## Git
+
+Global git dotfiles (such as user .gitconfig and .gitignore) are found in 
+.gitdotfiles. Any git files found in the repo root are files for configuing
+the repo specificly.
+
 # Dependencies
 
 ## Mercurial
