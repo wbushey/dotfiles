@@ -56,5 +56,5 @@ Edit ~/.hgrc to include the following
 Submodules are used to include many other projects. To update the included
 submodules, simple run the following in the repo
 
-    git submodule update --remote
+    git submodule update --recursive
     sudo .vim/bundle/YouCompleteMe/install.sh --clang-completer
