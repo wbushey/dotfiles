@@ -1,6 +1,24 @@
-[push]
-	default = current 
+[color]
+    ui = true
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = cyan bold
+[color "status"]
+    added = yellow
+    changed = cyan
+    untracked = red
 [core]
 	excludesfile = ~/.dotfiles/.gitdotfiles/.gitignore
 [diff]
 	submodule = log
+[push]
+	default = current 

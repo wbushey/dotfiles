@@ -18,14 +18,17 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#source /usr/local/bin/virtualenvwrapper.sh
+if [ -x /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # Add Git and Mercurial repo status to the prompt
-source $HOME/.dotfiles/.gitdotfiles/.git-prompt.sh
-
 GIT_PS1_SHOWDIRTYSTATE='True'
 GIT_PS1_SHOWUNTRACKEDFILES='True'
 GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWCOLORHINTS="yes"
+source $HOME/.dotfiles/.gitdotfiles/.git-prompt.sh
+
 
 hg_ps1() {
     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
