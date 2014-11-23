@@ -37,8 +37,17 @@ the repo specificly.
 
 Unfortunately, rbenv's gitignore prevents adding the following as submodules of this repo
 
+- [rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems)
 - [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
 - [ruby-build](https://github.com/sstephenson/ruby-build)
+
+For convienence
+
+    cd ~/.dotfiles
+    mkdir -p .ruby/rbenv/plugins
+    git clone https://github.com/sstephenson/rbenv-default-gems.git .ruby/rbenv/plugins/rbenv-default-gems
+    git clone https://github.com/sstephenson/rbenv-gem-rehash.git .ruby/rbenv/plugins/rbenv-gem-rehash
+    git clone https://github.com/sstephenson/ruby-build.git .ruby/rbenv/plugins/ruby-build
 
 ## Vim
 
