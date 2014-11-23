@@ -52,6 +52,8 @@ For convienence
 ## Vim
 
 - [vim](http://www.vim.org/) (>= 7.3.584 for YouCompleteMe)
+  - Debian: sudo apt-get install vim-gtk
+  - OS X: brew install macvim --override-system-vim
 - [cmake](http://www.cmake.org/) (for YouCompleteMe)
 - [flake8](https://pypi.python.org/pypi/flake8)
 - [Pathogen](https://github.com/tpope/vim-pathogen)
