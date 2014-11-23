@@ -1,3 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+# Option file for building YouCompleteMe
+/.ycm-clang-completer

@@ -2,10 +2,14 @@
 
 Common *nix config files that I like to customize. 
 
-Also includes the following submodules:
+Also includes the following other tools (submodules unless *):
 
 - [hg-prompt](https://github.com/pelletier/hg-prompt)
-- [rbenv](https://github.com/sstephenson/rbenv)
+- [rbenv](https://github.com/sstephenson/rbenv)*
+- [rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems)
+- [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
+- [rbenv-update](https://github.com/rkh/rbenv-update)
+- [ruby-build](https://github.com/sstephenson/ruby-build)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
@@ -14,9 +18,17 @@ Also includes the following submodules:
 
 ## Git
 
-Global git dotfiles (such as user .gitconfig and .gitignore) are found in 
-.gitdotfiles. Any git files found in the repo root are files for configuing
-the repo specificly.
+Global git dotfiles (such as user .gitconfig and .gitignore) are found in .gitdotfiles. Any git files found 
+in the repo root are files for configuing the repo specificly.
+
+## Rbenv
+
+This repo includes rbenv as a set of real folders and files, not as a submodule. This is because the rbenv
+repo gitignores the plugins folder, which prevents defining submodules in the plugins folder. 
+
+To allow for rbenv to still be updated, the rbenv-update plugin as has been added. 
+
+All of the plugins aresubmodules of this repo.
 
 # Dependencies
 
@@ -30,24 +42,6 @@ the repo specificly.
   sudo pip install virtualenv
 - [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/)
   sudo pip install virtualenvwrapper
-
-## Ruby
-
-- [rbenv](https://github.com/sstephenson/rbenv)
-
-Unfortunately, rbenv's gitignore prevents adding the following as submodules of this repo
-
-- [rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems)
-- [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
-- [ruby-build](https://github.com/sstephenson/ruby-build)
-
-For convienence
-
-    cd ~/.dotfiles
-    mkdir -p .ruby/rbenv/plugins
-    git clone https://github.com/sstephenson/rbenv-default-gems.git .ruby/rbenv/plugins/rbenv-default-gems
-    git clone https://github.com/sstephenson/rbenv-gem-rehash.git .ruby/rbenv/plugins/rbenv-gem-rehash
-    git clone https://github.com/sstephenson/ruby-build.git .ruby/rbenv/plugins/ruby-build
 
 ## Vim
 
@@ -65,12 +59,11 @@ For convienence
     cd ~
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
     cd .dotfiles
-    sudo .vim/bundle/YouCompleteMe/install.sh
+    chmod +x update.sh
+    ./update.sh
 
-Add the --clang-completer option to install.sh above to include support for C autocompletion.
+Create the file .ycm-clang-completer in the repo's root directory  to include support for C autocompletion.
 This will require GLIBC >= 2.14
-
-Also git clone the appropriate rbenv plugins
 
 Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
@@ -92,9 +85,8 @@ Edit ~/.vimrc to include the following
 
 # Updating
 
-Submodules are used to include many other projects. To update the included
-submodules, simple run the following in the repo
+Submodules are used to include many other projects. To update the included submodules, simple run the 
+following in the repo
 
     cd ~/.dotfiles
-    git submodule update --recursive
-    sudo .vim/bundle/YouCompleteMe/install.sh
+    ./update.sh
