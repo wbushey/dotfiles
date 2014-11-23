@@ -1,8 +1,5 @@
-[user]
-	name = Bill Bushey
-	email = wbushey@gmail.com
 [push]
-	default = matching
+	default = current 
 [core]
 	excludesfile = ~/.dotfiles/.gitdotfiles/.gitignore
 [diff]
