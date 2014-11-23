@@ -11,3 +11,12 @@
 	path = .hgdotfiles/hg-prompt
 	url = https://github.com/pelletier/hg-prompt.git
     ignore = all
+[submodule ".ruby/rbenv/plugins/rbenv-default-gems"]
+	path = .ruby/rbenv/plugins/rbenv-default-gems
+	url = https://github.com/sstephenson/rbenv-default-gems.git
+[submodule ".ruby/rbenv/plugins/rbenv-gem-rehash"]
+	path = .ruby/rbenv/plugins/rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule ".ruby/rbenv/plugins/ruby-build"]
+	path = .ruby/rbenv/plugins/ruby-build
+	url = https://github.com/sstephenson/ruby-build.git
