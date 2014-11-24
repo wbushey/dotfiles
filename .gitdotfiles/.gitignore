@@ -1,3 +1,5 @@
+##### Editors
+
 # Vim
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
@@ -5,6 +7,9 @@
 Session.vim
 .netrwhist
 *~
+
+# Aptana
+.project
 
 ##### OS X
 .DS_Store
