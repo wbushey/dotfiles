@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ~/.dotfiles
 git pull
-git submodule update --recursive
+git submodule update --init --recursive
 rbenv update
 if [ -e .ycm-clang-completer ]; then
     echo "Building YouCompleteMe with Clang Completer"
