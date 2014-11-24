@@ -24,9 +24,10 @@ fi
 
 # Add Git and Mercurial repo status to the prompt
 GIT_PS1_SHOWDIRTYSTATE='True'
+GIT_PS1_SHOWSTASHSTATE='True'
 GIT_PS1_SHOWUNTRACKEDFILES='True'
 GIT_PS1_SHOWUPSTREAM="auto"
-GIT_PS1_SHOWCOLORHINTS="yes"
+GIT_PS1_SHOWCOLORHINTS='True'
 source $HOME/.dotfiles/.gitdotfiles/.git-prompt.sh
 
 
