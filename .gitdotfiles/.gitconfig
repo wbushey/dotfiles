@@ -20,5 +20,7 @@
 	excludesfile = ~/.dotfiles/.gitdotfiles/.gitignore
 [diff]
 	submodule = log
+[pull]
+    default = current
 [push]
 	default = current 

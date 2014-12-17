@@ -11,6 +11,9 @@ Session.vim
 # Aptana
 .project
 
+# RubyMine
+.idea
+
 ##### OS X
 .DS_Store
 .AppleDouble
@@ -32,3 +35,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+## Redis
+/dump.rdb
+
+## Ruby
+vendor/bundle/
