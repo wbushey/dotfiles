@@ -23,3 +23,6 @@
 [submodule ".ruby/rbenv/plugins/rbenv-update"]
 	path = .ruby/rbenv/plugins/rbenv-update
 	url = https://github.com/rkh/rbenv-update.git
+[submodule ".hgdotfiles/hg-git"]
+	path = .hgdotfiles/hg-git
+	url = https://github.com/schacon/hg-git.git
