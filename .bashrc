@@ -30,13 +30,30 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS='True'
 source $HOME/.dotfiles/.gitdotfiles/.git-prompt.sh
 
+# Thanks https://stackoverflow.com/questions/10406926/how-to-change-default-virtualenvwrapper-prompt
+virtualenv_info(){
+    # Get Virtual Env
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Strip out the path and just leave the env name
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        # In case you don't have one activated
+        venv=''
+    fi
+    [[ -n "$venv" ]] && echo "[virtualenv: $venv] "
+}
 
 hg_ps1() {
     hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
-    }
+}
+
+build_prompt(){
+    virtualenv_info
+    __git_ps1 "\u@\h \w" "\$ "
+}
 
 #export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
-export PROMPT_COMMAND='__git_ps1 "\u@\h \w" "\$ "'
+export PROMPT_COMMAND='build_prompt'
 #export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
 export RBENV_ROOT=$HOME/.dotfiles/.ruby/rbenv
 export PATH="$RBENV_ROOT/bin:$PATH"
