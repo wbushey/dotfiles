@@ -60,7 +60,13 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(debian git git-extras pip sudo virtualenvwrapper)
+plugins=(git git-extras pip sudo virtualenvwrapper)
+
+if [[ `uname` == 'Darwin' ]]; then
+  plugins+=(brew)
+else if [[ `lsb_release -si` == 'Debian' ]]
+  plugins+=(debian)
+fi
 
 # User configuration
 
