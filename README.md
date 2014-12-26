@@ -69,6 +69,10 @@ Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
     source ~/.dotfiles/.bashrc
 
+Edit ~/.zshrc to include the following
+
+    source ~/.dotfiles/.zshdotfiles/.zshrc
+
 Edit ~/.gitconfig to include the following
 
     [include]
