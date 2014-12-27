@@ -3,16 +3,6 @@ if (( $+commands[$virtualenvwrapper] )); then
 
   source ${${virtualenvwrapper}:c}
 
-  export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-  function venv_prompt(){
-    VENV=${VIRTUAL_ENV##*/}
-    if [[ $VENV != "" ]]; then
-        echo "$ZSH_THEME_VENV_PROMPT_PREFIX$VENV$ZSH_THEME_VENV_PROMPT_SUFFIX "    
-    fi
-  }
-
-
   if [[ "$WORKON_HOME" == "" ]]; then
     echo "\$WORKON_HOME is not defined so ZSH plugin virtualenvwrapper will not work"
   else
