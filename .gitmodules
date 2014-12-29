@@ -26,3 +26,6 @@
 [submodule ".hgdotfiles/hg-git"]
 	path = .hgdotfiles/hg-git
 	url = https://github.com/schacon/hg-git.git
+[submodule ".zshdotfiles/oh-my-zsh/plugins/virtualenv-prompt"]
+	path = .zshdotfiles/oh-my-zsh/plugins/virtualenv-prompt
+	url = git://github.com/tonyseek/oh-my-zsh-virtualenv-prompt.git
