@@ -55,10 +55,5 @@ build_prompt(){
 #export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
 export PROMPT_COMMAND='build_prompt'
 #export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
-export RBENV_ROOT=$HOME/.dotfiles/.ruby/rbenv
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
 
-# Make bundled executables a bit more natural to use
-alias bi='bundle install --binstubs .bundle/bin --path vendor/bundle'
-export PATH=".bundle/bin:$PATH"
+source ~/.dotfiles/.shell/ruby.sh
