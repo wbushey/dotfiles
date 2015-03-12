@@ -35,28 +35,39 @@ All of the plugins aresubmodules of this repo.
 ## Mercurial
 
 - [mercurial](http://mercurial.selenic.com/)
+  ```sudo apt-get install mercurial```
 
 ## Python
 
+- [pip](https://pip.pypa.io/en/latest/installing.html)
+  ```wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py```
 - [virturlenv](http://virtualenv.readthedocs.org/)
-  sudo pip install virtualenv
+  ```sudo pip install virtualenv```
 - [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/)
-  sudo pip install virtualenvwrapper
+  ```sudo pip install virtualenvwrapper```
 
 ## Vim
 
 - [vim](http://www.vim.org/) (>= 7.3.584 for YouCompleteMe)
-  - Debian: sudo apt-get install vim-gtk
-  - OS X: brew install macvim --override-system-vim
+  - Debian: ```sudo apt-get install vim-gtk```
+  - OS X: ```brew install macvim --override-system-vim```
 - [cmake](http://www.cmake.org/) (for YouCompleteMe)
+  ```sudo apt-get install g++ cmake```
 - [flake8](https://pypi.python.org/pypi/flake8)
+  ```sudo pip install flake8```
 - [Pathogen](https://github.com/tpope/vim-pathogen)
+  ```mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim```
 - Python Development headers/libraries (for YouCompleteMe)
   - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
+    ```sudo apt-get install python-dev```
 
 # Installation
 
     cd ~
+    wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+    sudo apt-get install mercurial vim-gtk g++ cmake python-dev
+    sudo pip install virtualwrapper virtualenvwrapper flake8
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
     cd .dotfiles
     chmod +x update.sh
