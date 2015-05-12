@@ -29,3 +29,9 @@
 [submodule ".zshdotfiles/oh-my-zsh/plugins/virtualenv-prompt"]
 	path = .zshdotfiles/oh-my-zsh/plugins/virtualenv-prompt
 	url = git://github.com/tonyseek/oh-my-zsh-virtualenv-prompt.git
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/vim-bundler"]
+	path = .vim/bundle/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
