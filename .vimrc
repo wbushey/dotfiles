@@ -26,5 +26,9 @@ au FileType python set softtabstop=4
 au FileType python highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 au FileType python match OverLength /\%>79v.\+/
 
+" JavaScript
+let javascript_enable_domhtmlcss=1
+au FileType javascript setlocal ts=2 sts=2 sw=2
+
 " Markdown Options
 let g:vim_markdown_folding_disabled=1
