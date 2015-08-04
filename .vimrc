@@ -32,3 +32,24 @@ au FileType javascript setlocal ts=2 sts=2 sw=2
 
 " Markdown Options
 let g:vim_markdown_folding_disabled=1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+function! JavascriptCheckers()
+  if filereadable(getcwd() . '/.jshintrc')
+    return ['jshint']
+  else
+    return ['eslint']
+  endif
+endfunction
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers=JavascriptCheckers()
+let g:syntastic_scss_checkers = ['scss_lint']

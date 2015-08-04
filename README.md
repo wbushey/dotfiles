@@ -60,6 +60,8 @@ All of the plugins aresubmodules of this repo.
 - Python Development headers/libraries (for YouCompleteMe)
   - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
     ```sudo apt-get install python-dev```
+- Syntastic - npm & jshint
+  - Debian: ```sudo apt-get install npm && npm install -g jshint``
 
 # Installation
 
@@ -67,6 +69,7 @@ All of the plugins aresubmodules of this repo.
     wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
     sudo apt-get install mercurial vim-gtk g++ cmake python-dev
     sudo pip install virtualwrapper virtualenvwrapper flake8
+    sudo apt-get install npm && npm install -g jshint
     mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
     cd .dotfiles
