@@ -44,3 +44,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".ruby/rbenv/plugins/rbenv-vars"]
+	path = .ruby/rbenv/plugins/rbenv-vars
+	url = https://github.com/sstephenson/rbenv-vars.git
