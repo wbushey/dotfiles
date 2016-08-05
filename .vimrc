@@ -4,7 +4,7 @@ set number
 set ruler
 set nowrap
 set autoindent
-set shiftwidth=4
+set shiftwidth=2
 syntax on
 au BufNewFile,BufRead *.raml set filetype=yaml
 filetype plugin indent on

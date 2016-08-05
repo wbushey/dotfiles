@@ -57,3 +57,4 @@ export PROMPT_COMMAND='build_prompt'
 #export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
 
 source ~/.dotfiles/.shell/ruby.sh
+source ~/.dotfiles/.shell/node.sh
