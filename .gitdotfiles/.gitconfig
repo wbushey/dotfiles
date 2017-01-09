@@ -7,6 +7,7 @@
     current = yellow reverse
     local = yellow
     remote = green
+    autosetupmerge = always
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
