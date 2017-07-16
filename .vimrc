@@ -1,6 +1,6 @@
 execute pathogen#infect('~/.dotfiles/.vim/bundle/{}')
 
-set number
+set relativenumber
 set ruler
 set nowrap
 set autoindent
@@ -53,3 +53,13 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers=JavascriptCheckers()
 let g:syntastic_scss_checkers = ['scss_lint']
+
+" Disable arrow keys
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>

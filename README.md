@@ -37,6 +37,10 @@ All of the plugins aresubmodules of this repo.
 - [mercurial](http://mercurial.selenic.com/)
   ```sudo apt-get install mercurial```
 
+## Node
+ - [nvm](https://github.com/creationix/nvm)
+  ```wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash``
+
 ## Python
 
 - [pip](https://pip.pypa.io/en/latest/installing.html)
@@ -67,9 +71,10 @@ All of the plugins aresubmodules of this repo.
 
     cd ~
     wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
     sudo apt-get install mercurial vim-gtk g++ cmake python-dev
     sudo pip install virtualwrapper virtualenvwrapper flake8
-    sudo apt-get install npm && npm install -g jshint
+    nvm install stable && nvm alias default stable && npm install -g jshint
     mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
     cd .dotfiles
