@@ -39,33 +39,33 @@ All of the plugins aresubmodules of this repo.
 
 ## Node
  - [nvm](https://github.com/creationix/nvm)
-  ```wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash``
+  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash`
 
 ## Python
 
 - [pip](https://pip.pypa.io/en/latest/installing.html)
-  ```wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py```
+  `wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py`
 - [virturlenv](http://virtualenv.readthedocs.org/)
-  ```sudo pip install virtualenv```
+  `sudo pip install virtualenv`
 - [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/)
-  ```sudo pip install virtualenvwrapper```
+  `sudo pip install virtualenvwrapper`
 
 ## Vim
 
 - [vim](http://www.vim.org/) (>= 7.3.584 for YouCompleteMe)
-  - Debian: ```sudo apt-get install vim-gtk```
-  - OS X: ```brew install macvim --override-system-vim```
+  - Debian: `sudo apt-get install vim-gtk`
+  - OS X: `brew install macvim --override-system-vim`
 - [cmake](http://www.cmake.org/) (for YouCompleteMe)
-  ```sudo apt-get install g++ cmake```
+  `sudo apt-get install g++ cmake`
 - [flake8](https://pypi.python.org/pypi/flake8)
-  ```sudo pip install flake8```
-- [Pathogen](https://github.com/tpope/vim-pathogen)
-  ```mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim```
+  `sudo pip install flake8`
+- [vim-plug](https://github.com/junegunn/vim-plug)
+  ` curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
 - Python Development headers/libraries (for YouCompleteMe)
   - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
-    ```sudo apt-get install python-dev```
+    `sudo apt-get install python-dev`
 - Syntastic - npm & jshint
-  - Debian: ```sudo apt-get install npm && npm install -g jshint``
+  - Debian: `sudo apt-get install npm && npm install -g jshint`
 
 # Installation
 
