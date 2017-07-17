@@ -60,7 +60,7 @@ All of the plugins aresubmodules of this repo.
 - [flake8](https://pypi.python.org/pypi/flake8)
   `sudo pip install flake8`
 - [vim-plug](https://github.com/junegunn/vim-plug)
-  ` curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
+  `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
 - Python Development headers/libraries (for YouCompleteMe)
   - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
     `sudo apt-get install python-dev`
