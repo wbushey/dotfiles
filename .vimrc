@@ -27,6 +27,11 @@ syntax on
 au BufNewFile,BufRead *.raml set filetype=yaml
 filetype plugin indent on
 
+" Ctrl-P
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\.git$\|node_modules$\|vendor$'
+      \}
+
 " Tabs
 set expandtab
 set tabstop=2
@@ -35,14 +40,6 @@ set softtabstop=2
 " Set line length highlight defaults 
 set colorcolumn=80
 highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
-
-" Python
-au FileType python set textwidth=79
-au FileType python set colorcolumn=+1
-au FileType python set tabstop=4
-au FileType python set softtabstop=4
-au FileType python highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-au FileType python match OverLength /\%>79v.\+/
 
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
@@ -63,6 +60,14 @@ autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
 " Markdown Options
 let g:vim_markdown_folding_disabled=1
+
+" Python
+au FileType python set textwidth=79
+au FileType python set colorcolumn=+1
+au FileType python set tabstop=4
+au FileType python set softtabstop=4
+au FileType python highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+au FileType python match OverLength /\%>79v.\+/
 
 " Disable arrow keys
 inoremap  <Up>     <NOP>
