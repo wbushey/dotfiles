@@ -16,7 +16,6 @@ Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-co
 call plug#end()
 
 set autoindent
-set foldmethod=syntax
 set incsearch
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set nowrap
@@ -60,9 +59,6 @@ let g:prettier#quickfix_enabled = 0
 let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
-
-" Markdown Options
-let g:vim_markdown_folding_disabled=1
 
 " Python
 au FileType python set textwidth=79
