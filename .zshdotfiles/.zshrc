@@ -63,7 +63,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git git-extras pip sudo virtualenv-prompt virtualenvwrapper)
 
 if [[ `uname` == 'Darwin' ]]; then
-  plugins+=(brew)
+#  plugins+=(brew)
 else if [[ `lsb_release -si` == 'Debian' ]]
   plugins+=(debian)
 fi
