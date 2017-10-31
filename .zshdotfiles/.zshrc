@@ -62,9 +62,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-extras pip sudo virtualenv-prompt virtualenvwrapper)
 
-if [[ `uname` == 'Darwin' ]]; then
-#  plugins+=(brew)
-else if [[ `lsb_release -si` == 'Debian' ]]
+if [[ `lsb_release -si` == 'Debian' ]]; then
   plugins+=(debian)
 fi
 
@@ -99,6 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+unsetopt AUTO_CD
 
 source ~/.dotfiles/.shell/ruby.sh
 source ~/.dotfiles/.shell/node.sh
