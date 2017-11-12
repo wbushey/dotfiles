@@ -12,24 +12,25 @@ Plug 'mitermayer/vim-prettier', { 'for': ['javascript', 'javascript.jsx', 'types
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
+Plug 'nightsense/vimspectr'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
 call plug#end()
 
 set autoindent
 set incsearch
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-set nowrap
 set relativenumber
 set ruler
 set scrolloff=1
 set shiftwidth=2
 syntax on
+colorscheme vimspectr210wcurve-dark
 au BufNewFile,BufRead *.raml set filetype=yaml
 filetype plugin indent on
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\.git$\|node_modules$\|vendor$'
+      \ 'dir': '\.git$\|node_modules$\|vendor$\|_site$'
       \}
 
 " Tabs and Delimator autocompletion
@@ -38,10 +39,6 @@ set tabstop=2
 set softtabstop=2
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
-
-" Set line length highlight defaults 
-set colorcolumn=80
-highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
 
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
@@ -77,3 +74,4 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
