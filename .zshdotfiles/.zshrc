@@ -100,7 +100,5 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt AUTO_CD
 
-[ -n "$PS1" ] && sh ~/.vim/plugged/vimspectr/shell/vimspectr210wcurve-dark
-
 source ~/.dotfiles/.shell/ruby.sh
 source ~/.dotfiles/.shell/node.sh

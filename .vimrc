@@ -3,6 +3,7 @@ Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
+Plug 'altercation/vim-colors-solarized'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -12,7 +13,6 @@ Plug 'mitermayer/vim-prettier', { 'for': ['javascript', 'javascript.jsx', 'types
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
-Plug 'nightsense/vimspectr'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
 call plug#end()
 
@@ -24,7 +24,8 @@ set ruler
 set scrolloff=1
 set shiftwidth=2
 syntax on
-colorscheme vimspectr210wcurve-dark
+set background=dark
+colorscheme solarized
 au BufNewFile,BufRead *.raml set filetype=yaml
 filetype plugin indent on
 
@@ -74,4 +75,3 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
