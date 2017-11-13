@@ -39,10 +39,6 @@ set softtabstop=2
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 
-" Set line length highlight defaults 
-set colorcolumn=80
-highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
-
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
 let javascript_enable_domhtmlcss = 1
