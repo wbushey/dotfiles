@@ -3,6 +3,7 @@ Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
+Plug 'altercation/vim-colors-solarized'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -18,18 +19,19 @@ call plug#end()
 set autoindent
 set incsearch
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-set nowrap
 set relativenumber
 set ruler
 set scrolloff=1
 set shiftwidth=2
 syntax on
+set background=dark
+colorscheme solarized
 au BufNewFile,BufRead *.raml set filetype=yaml
 filetype plugin indent on
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\.git$\|node_modules$\|vendor$'
+      \ 'dir': '\.git$\|node_modules$\|vendor$\|_site$'
       \}
 
 " Tabs and Delimator autocompletion
@@ -38,10 +40,6 @@ set tabstop=2
 set softtabstop=2
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
-
-" Set line length highlight defaults 
-set colorcolumn=80
-highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
 
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
