@@ -1,3 +1,7 @@
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/.zshdotfiles/oh-my-zsh
 
