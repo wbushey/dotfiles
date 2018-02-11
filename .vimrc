@@ -16,30 +16,40 @@ Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
 call plug#end()
 
-set autoindent
+" Color and Display
+syntax on
+set background=dark
+colorscheme solarized
 set incsearch
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set relativenumber
 set ruler
 set scrolloff=1
 set shiftwidth=2
-syntax on
-set background=dark
-colorscheme solarized
+set nofoldenable
+
+" Additional Filetype associations
 au BufNewFile,BufRead *.raml set filetype=yaml
-filetype plugin indent on
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\.git$\|node_modules$\|vendor$\|_site$'
       \}
 
-" Tabs and Delimator autocompletion
+" Tabs, Indentation, and Delimator autocompletion
 set expandtab
 set tabstop=2
 set softtabstop=2
+set autoindent
+filetype plugin indent on
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
+
+" General Linting
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" Java
+au FileType java setlocal ts=4 sts=4 sw=4
 
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
@@ -54,15 +64,15 @@ function! JavascriptCheckers()
 endfunction
 let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
+let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
 " Python
+au FileType python setlocal ts=4 sts=4 sw=4
 au FileType python set textwidth=79
 au FileType python set colorcolumn=+1
-au FileType python set tabstop=4
-au FileType python set softtabstop=4
 au FileType python highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 au FileType python match OverLength /\%>79v.\+/
 
