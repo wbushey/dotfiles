@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'
+Plug 'w0rp/ale' " lint support
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
@@ -54,18 +54,14 @@ au FileType java setlocal ts=4 sts=4 sw=4
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
 let javascript_enable_domhtmlcss = 1
-let g:javascript_plugin_flow = 1
-function! JavascriptCheckers()
-  if filereadable(getcwd() . '/.jshintrc')
-    return ['jshint']
-  else
-    return ['eslint']
-  endif
-endfunction
 let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
-let g:ale_fixers = {'javascript': ['eslint']}
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:javascript_plugin_flow = 1
+if filereadable(getcwd() . '/.jshintrc')
+  let g:ale_linters = {'jsx': ['stylelint', 'jshint']}
+else
+  let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+endif
 let g:ale_linter_aliases = {'jsx': 'css'}
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
