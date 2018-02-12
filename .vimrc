@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale' " lint support
 Plug 'kien/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
@@ -11,6 +10,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'mitermayer/vim-prettier', { 'for': ['javascript', 'javascript.jsx', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
@@ -45,8 +45,14 @@ filetype plugin indent on
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 
-" General Linting
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" Linting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Java
 au FileType java setlocal ts=4 sts=4 sw=4
@@ -57,12 +63,8 @@ let javascript_enable_domhtmlcss = 1
 let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
 let g:javascript_plugin_flow = 1
-if filereadable(getcwd() . '/.jshintrc')
-  let g:ale_linters = {'jsx': ['stylelint', 'jshint']}
-else
-  let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-endif
-let g:ale_linter_aliases = {'jsx': 'css'}
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
 " Python
