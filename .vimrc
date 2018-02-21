@@ -34,7 +34,7 @@ au BufNewFile,BufRead *.raml set filetype=yaml
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\.git$\|node_modules$\|vendor$\|_site$'
+      \ 'dir': '\.git$\|node_modules$\|target$\|vendor$\|_site$'
       \}
 
 " Tabs, Indentation, and Delimator autocompletion
