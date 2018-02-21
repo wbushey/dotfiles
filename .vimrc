@@ -27,6 +27,7 @@ set ruler
 set scrolloff=1
 set shiftwidth=2
 set nofoldenable
+set list
 
 " Additional Filetype associations
 au BufNewFile,BufRead *.raml set filetype=yaml
