@@ -73,7 +73,7 @@ All of the plugins aresubmodules of this repo.
     sudo apt-get install mercurial vim-gtk g++ cmake python-dev
     sudo pip install virtualenv virtualenvwrapper flake8
     nvm install stable && nvm alias default stable
-    git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
+    git clone --recursive https://github.com/wbushey/dotfiles.git .dotfiles
 
 Create the file .ycm-clang-completer in the repo's root directory  to include support for C autocompletion.
 This will require GLIBC >= 2.14
