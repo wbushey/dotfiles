@@ -39,7 +39,7 @@ All of the plugins aresubmodules of this repo.
 
 ## Node
  - [nvm](https://github.com/creationix/nvm)
-  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash`
+  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`
 
 ## Python
 
@@ -64,17 +64,15 @@ All of the plugins aresubmodules of this repo.
 - Python Development headers/libraries (for YouCompleteMe)
   - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
     `sudo apt-get install python-dev`
-- Syntastic - npm & jshint
-  - Debian: `sudo apt-get install npm && npm install -g jshint`
 
 # Installation
 
     cd ~
     wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
     sudo apt-get install mercurial vim-gtk g++ cmake python-dev
     sudo pip install virtualenv virtualenvwrapper flake8
-    nvm install stable && nvm alias default stable && npm install -g jshint
+    nvm install stable && nvm alias default stable
     git clone --recursive https://github.com/wbushey/vimrc.git .dotfiles
 
 Create the file .ycm-clang-completer in the repo's root directory  to include support for C autocompletion.
