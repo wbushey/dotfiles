@@ -66,8 +66,12 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-extras pip sudo virtualenv-prompt virtualenvwrapper)
 
-if [[ `lsb_release -si` == 'Debian' ]]; then
-  plugins+=(debian)
+
+if command -v lsb_release>/dev/null; then
+  if [[ `lsb_release -si` == 'Debian' ]]; then
+    echo "Loading Debian ZSH plugins"
+    plugins+=(debian)
+  fi
 fi
 
 # User configuration

@@ -31,6 +31,7 @@ set list
 
 " Additional Filetype associations
 au BufNewFile,BufRead *.raml set filetype=yaml
+au BufNewFile,BufRead *.avsc set filetype=json
 
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
