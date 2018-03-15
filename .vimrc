@@ -5,6 +5,8 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -13,7 +15,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
+"Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
 call plug#end()
 
 " Color and Display
@@ -57,7 +59,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Java
-au FileType java setlocal ts=4 sts=4 sw=4
+au FileType java setlocal ts=2 sts=2 sw=2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " JavaScript/CSS/SCSS
 au FileType javascript setlocal ts=2 sts=2 sw=2
