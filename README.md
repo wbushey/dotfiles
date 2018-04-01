@@ -12,7 +12,6 @@ Also includes the following other tools (submodules unless *):
 - [ruby-build](https://github.com/sstephenson/ruby-build)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
-- [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
 
 # Notes
 
@@ -52,31 +51,23 @@ All of the plugins aresubmodules of this repo.
 
 ## Vim
 
-- [vim](http://www.vim.org/) (>= 7.3.584 for YouCompleteMe)
+- [vim](http://www.vim.org/)
   - Debian: `sudo apt-get install vim-gtk`
   - OS X: `brew install macvim --override-system-vim`
-- [cmake](http://www.cmake.org/) (for YouCompleteMe)
-  `sudo apt-get install g++ cmake`
 - [flake8](https://pypi.python.org/pypi/flake8)
   `sudo pip install flake8`
 - [vim-plug](https://github.com/junegunn/vim-plug)
   `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
-- Python Development headers/libraries (for YouCompleteMe)
-  - Debian: [python-dev](https://packages.debian.org/stable/python-dev)
-    `sudo apt-get install python-dev`
 
 # Installation
 
     cd ~
     wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
     wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-    sudo apt-get install mercurial vim-gtk g++ cmake python-dev
+    sudo apt-get install mercurial vim-gtk
     sudo pip install virtualenv virtualenvwrapper flake8
     nvm install stable && nvm alias default stable
     git clone --recursive https://github.com/wbushey/dotfiles.git .dotfiles
-
-Create the file .ycm-clang-completer in the repo's root directory  to include support for C autocompletion.
-This will require GLIBC >= 2.14
 
 Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 

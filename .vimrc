@@ -15,7 +15,6 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
-"Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --tern-completer'}
 call plug#end()
 
 " Color and Display
