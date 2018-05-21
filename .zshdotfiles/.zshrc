@@ -69,7 +69,6 @@ plugins=(git git-extras pip sudo virtualenv-prompt virtualenvwrapper)
 
 if command -v lsb_release>/dev/null; then
   if [[ `lsb_release -si` == 'Debian' ]]; then
-    echo "Loading Debian ZSH plugins"
     plugins+=(debian)
   fi
 fi
