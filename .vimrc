@@ -23,7 +23,8 @@ set background=dark
 colorscheme solarized
 set incsearch
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-set relativenumber
+set number
+"set relativenumber
 set ruler
 set scrolloff=1
 set shiftwidth=2
