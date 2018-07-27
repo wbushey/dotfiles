@@ -107,5 +107,6 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt AUTO_CD
 
-source ~/.dotfiles/.shell/ruby.sh
+source ~/.dotfiles/.shell/git.sh
 source ~/.dotfiles/.shell/node.sh
+source ~/.dotfiles/.shell/ruby.sh
