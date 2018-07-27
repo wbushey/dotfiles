@@ -43,18 +43,12 @@ virtualenv_info(){
     [[ -n "$venv" ]] && echo "[virtualenv: $venv] "
 }
 
-hg_ps1() {
-    hg prompt "{ on {branch}}{ at {bookmark}}{status}" 2> /dev/null
-}
-
 build_prompt(){
     virtualenv_info
     __git_ps1 "\u@\h \w" "\$ "
 }
 
-#export PS1='\u@\h \w$(hg_ps1)$(__git_ps1 " (%s)")\$ '
 export PROMPT_COMMAND='build_prompt'
-#export PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
 
 source ~/.dotfiles/.shell/ruby.sh
 source ~/.dotfiles/.shell/node.sh
