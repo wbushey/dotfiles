@@ -64,7 +64,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras pip sudo virtualenv-prompt virtualenvwrapper)
+plugins=(git-extras sudo virtualenvwrapper vi-mode)
 
 
 if command -v lsb_release>/dev/null; then
