@@ -29,6 +29,10 @@ To allow for rbenv to still be updated, the rbenv-update plugin as has been adde
 
 All of the plugins aresubmodules of this repo.
 
+## jEnv
+
+This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
+
 # Dependencies
 
 ## Mercurial

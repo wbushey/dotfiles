@@ -53,3 +53,4 @@ unsetopt AUTO_CD
 source ~/.dotfiles/.shell/git.sh
 source ~/.dotfiles/.shell/node.sh
 source ~/.dotfiles/.shell/ruby.sh
+source ~/.dotfiles/.shell/java.sh
