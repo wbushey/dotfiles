@@ -41,6 +41,7 @@ let g:ctrlp_custom_ignore = {
       \}
 
 " Tabs, Indentation, and Delimator autocompletion
+set backspace=indent,eol,start
 set expandtab
 set tabstop=2
 set softtabstop=2
