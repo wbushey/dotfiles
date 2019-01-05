@@ -58,7 +58,10 @@ reset_node_commands(){
       unset -f __init_nvm
       nvm_use_scope_version
     }
-    for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+    for i in "${__node_commands[@]}"; do
+      # shellcheck disable=SC2139
+      alias "$i=__init_nvm && $i";
+    done
   fi
 }
 

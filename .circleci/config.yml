@@ -8,5 +8,4 @@ jobs:
       - run:
           name: Shell Check
           command: |
-            find . -type f -name '*.sh' | wc -l
-            find . -type f -name '*.sh' | xargs shellcheck --external-sources
+            sh lint.sh

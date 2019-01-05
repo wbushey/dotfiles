@@ -1,3 +1,5 @@
+#! /bin/bash
+
 gut() {
   printf '%s' 'Are you sure you want to gut? [y/N] '
   read -r response
