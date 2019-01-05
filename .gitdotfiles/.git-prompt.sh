@@ -1,3 +1,4 @@
+#! /bin/bash
 # bash/zsh git prompt support
 #
 # Copyright (C) 2006,2007 Shawn O. Pearce <spearce@spearce.org>
@@ -99,7 +100,8 @@ __git_ps1_show_upstream ()
 
 	svn_remote=()
 	# get some config options from git-config
-	local output="$(git config -z --get-regexp '^(svn-remote\..*\.url|bash\.showupstream)$' 2>/dev/null | tr '\0\n' '\n ')"
+	output="$(git config -z --get-regexp '^(svn-remote\..*\.url|bash\.showupstream)$' 2>/dev/null | tr '\0\n' '\n ')"
+  local output
 	while read -r key value; do
 		case "$key" in
 		bash.showupstream)
@@ -137,13 +139,17 @@ __git_ps1_show_upstream ()
 		svn_upstream=($(git log --first-parent -1 \
 					--grep="^git-svn-id: \(${svn_url_pattern#??}\)" 2>/dev/null))
 		if [[ 0 -ne ${#svn_upstream[@]} ]]; then
+      # shellcheck disable=SC2178
 			svn_upstream=${svn_upstream[${#svn_upstream[@]} - 2]}
+      # shellcheck disable=SC2178
 			svn_upstream=${svn_upstream%@*}
 			local n_stop="${#svn_remote[@]}"
 			for ((n=1; n <= n_stop; n++)); do
+        # shellcheck disable=SC2178
 				svn_upstream=${svn_upstream#${svn_remote[$n]}}
 			done
 
+      # shellcheck disable=SC2128
 			if [[ -z "$svn_upstream" ]]; then
 				# default branch name for checkouts with no layout:
 				upstream=${GIT_SVN_ID:-git-svn}
@@ -209,7 +215,7 @@ __git_ps1_show_upstream ()
 		if [[ -n "$count" && -n "$name" ]]; then
 			__git_ps1_upstream_name=$(git rev-parse \
 				--abbrev-ref "$upstream" 2>/dev/null)
-			if [ $pcmode = yes ] && [ $ps1_expanded = yes ]; then
+			if [ "$pcmode" = yes ] && [ "$ps1_expanded" = yes ]; then
 				p="$p \${__git_ps1_upstream_name}"
 			else
 				p="$p ${__git_ps1_upstream_name}"
@@ -245,7 +251,7 @@ __git_ps1_colorize_gitstring ()
 	local flags_color="$c_lblue"
 
 	local branch_color=""
-	if [ $detached = no ]; then
+	if [ "$detached" = no ]; then
 		branch_color="$ok_color"
 	else
 		branch_color="$bad_color"
@@ -272,7 +278,7 @@ __git_eread ()
 {
 	f="$1"
 	shift
-	test -r "$f" && read "$@" <"$f"
+	test -r "$f" && read -r "$@" <"$f"
 }
 
 # __git_ps1 accepts 0 or 1 arguments (i.e., format string)
@@ -494,6 +500,7 @@ __git_ps1 ()
 
 	b=${b##refs/heads/}
 	if [ $pcmode = yes ] && [ $ps1_expanded = yes ]; then
+    # shellcheck disable=SC2034
 		__git_ps1_branch_name=$b
 		b="\${__git_ps1_branch_name}"
 	fi
@@ -503,12 +510,12 @@ __git_ps1 ()
 
 	if [ $pcmode = yes ]; then
 		if [ "${__git_printf_supports_v-}" != yes ]; then
-			gitstring=$(printf -- "$printf_format" "$gitstring")
+			gitstring=$(printf -- "%s %s" "$printf_format" "$gitstring")
 		else
-			printf -v gitstring -- "$printf_format" "$gitstring"
+			printf -v gitstring -- "%s %s" "$printf_format" "$gitstring"
 		fi
 		PS1="$ps1pc_start$gitstring$ps1pc_end"
 	else
-		printf -- "$printf_format" "$gitstring"
+		printf -- "%s %s" "$printf_format" "$gitstring"
 	fi
 }

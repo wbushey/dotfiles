@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [[ -d "~/.jenv/bin" ]]; then
+if [[ -d "$HOME/.jenv/bin" ]]; then
   export PATH="$HOME/.jenv/bin:$PATH"
 fi
 
