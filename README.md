@@ -38,11 +38,11 @@ This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
 ## Mercurial
 
 - [mercurial](http://mercurial.selenic.com/)
-  ```sudo apt-get install mercurial```
+  `sudo apt-get install mercurial`
 
 ## Node
  - [nvm](https://github.com/creationix/nvm)
-  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`
+  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
 
 ## Python
 
@@ -67,7 +67,7 @@ This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
 
     cd ~
     wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
     sudo apt-get install mercurial vim-gtk
     sudo pip install virtualenv virtualenvwrapper flake8
     nvm install stable && nvm alias default stable
@@ -79,7 +79,7 @@ Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
 Edit ~/.zshrc to include the following
 
-    source ~/.dotfiles/.zshdotfiles/.zshrc
+    source ~/.dotfiles/zsh/zshrc
 
 Edit ~/.gitconfig to include the following
 
@@ -93,6 +93,10 @@ Edit ~/.hgrc to include the following
 Edit ~/.vimrc to include the following
 
     source ~/.dotfiles/.vimrc
+
+Edit ~/.tmux.conf to include the following
+
+    source-file ~/.dotfiles/tmux/tmux.conf
 
 
 # Updating
