@@ -79,7 +79,7 @@ Edit ~/.bashrc --or-- ~/.bash_profile to include the following
 
 Edit ~/.zshrc to include the following
 
-    source ~/.dotfiles/.zshdotfiles/.zshrc
+    source ~/.dotfiles/zsh/zshrc
 
 Edit ~/.gitconfig to include the following
 
