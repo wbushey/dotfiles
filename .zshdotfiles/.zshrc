@@ -42,7 +42,7 @@ source $ZSH/oh-my-zsh.sh
 setopt histignorealldups sharehistory
 if [ "$(uname 2> /dev/null)" = 'Darwin' ]; then
   bindkey "$terminfo[kcuu1]" history-search-backward
-  bindkey "$terminfo[kcub1]" history-search-forward
+  bindkey "$terminfo[kcud1]" history-search-forward
 fi
 
 # You may need to manually set your language environment
