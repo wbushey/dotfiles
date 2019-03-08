@@ -50,6 +50,9 @@ build_prompt(){
 
 export PROMPT_COMMAND='build_prompt'
 
+alias syspath='tr ":" "\n" <<< "$PATH"'
+
+source ~/.dotfiles/.shell/shell.sh
 source ~/.dotfiles/.shell/git.sh
 source ~/.dotfiles/.shell/node.sh
 source ~/.dotfiles/.shell/ruby.sh
