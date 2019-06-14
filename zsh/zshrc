@@ -1,3 +1,14 @@
+# Detect the OS
+if [ "$(uname 2> /dev/null)" = 'Darwin' ]; then
+  OS="MacOS"
+elif command -v lsb_release>/dev/null; then
+  if [[ `lsb_release -si` == 'Ubuntu' ]]; then
+    OS="Ubuntu"
+  elif [[ `lsb_release -si` == 'Debian' ]]; then
+    OS="Debian"
+  fi
+fi
+
 # Start tmux if it is available
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
@@ -23,18 +34,24 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git-extras virtualenvwrapper vi-mode)
+plugins=(bundler colored-man-pages colorize command-not-found docker docker-compose dotenv git-extras gradle helm kubectl virtualenvwrapper vi-mode)
 
-# Load Debian plugins only in Debian
-if command -v lsb_release>/dev/null; then
-  if [[ `lsb_release -si` == 'Debian' ]]; then
-    plugins+=(debian)
-  fi
+# Load OS specific plugins
+if [[ $OS == 'MacOS' ]];then
+  plugins+=(brew osx)
+elif [[ $OS == 'Debian' ]]; then
+  plugins+=(debian)
+elif [[ $OS == 'Ubuntu' ]]; then
+  plugins+=(ubuntu)
+fi
+
+# Load command helper plugins
+if command -v aws>/dev/null; then
+  plugins+=(aws)
 fi
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
@@ -42,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # History
 # This relies on Oh My Zsh
 setopt histignorealldups sharehistory
-if [ "$(uname 2> /dev/null)" = 'Darwin' ]; then
+if [[ $OS = 'MacOS' ]]; then
   bindkey "$terminfo[kcuu1]" history-search-backward
   bindkey "$terminfo[kcud1]" history-search-forward
 fi
