@@ -34,7 +34,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler colored-man-pages colorize command-not-found docker docker-compose dotenv git-extras gradle helm kubectl virtualenvwrapper vi-mode)
+plugins=(colored-man-pages dotenv git-extras helm kubectl virtualenvwrapper vi-mode)
 
 # Load OS specific plugins
 if [[ $OS == 'MacOS' ]];then
