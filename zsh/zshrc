@@ -38,7 +38,7 @@ plugins=(bundler colored-man-pages colorize command-not-found docker docker-comp
 
 # Load OS specific plugins
 if [[ $OS == 'MacOS' ]];then
-  plugins+=(brew osx)
+  plugins+=(osx)
 elif [[ $OS == 'Debian' ]]; then
   plugins+=(debian)
 elif [[ $OS == 'Ubuntu' ]]; then
