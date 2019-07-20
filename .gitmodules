@@ -11,18 +11,6 @@
 	path = .hgdotfiles/hg-prompt
 	url = https://github.com/pelletier/hg-prompt.git
     ignore = all
-[submodule ".ruby/rbenv/plugins/rbenv-default-gems"]
-	path = .ruby/rbenv/plugins/rbenv-default-gems
-	url = https://github.com/sstephenson/rbenv-default-gems.git
-[submodule ".ruby/rbenv/plugins/rbenv-gem-rehash"]
-	path = .ruby/rbenv/plugins/rbenv-gem-rehash
-	url = https://github.com/sstephenson/rbenv-gem-rehash.git
-[submodule ".ruby/rbenv/plugins/ruby-build"]
-	path = .ruby/rbenv/plugins/ruby-build
-	url = https://github.com/sstephenson/ruby-build.git
-[submodule ".ruby/rbenv/plugins/rbenv-update"]
-	path = .ruby/rbenv/plugins/rbenv-update
-	url = https://github.com/rkh/rbenv-update.git
 [submodule ".hgdotfiles/hg-git"]
 	path = .hgdotfiles/hg-git
 	url = https://github.com/schacon/hg-git.git
@@ -44,9 +32,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule ".ruby/rbenv/plugins/rbenv-vars"]
-	path = .ruby/rbenv/plugins/rbenv-vars
-	url = https://github.com/sstephenson/rbenv-vars.git
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
