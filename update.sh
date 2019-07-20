@@ -3,4 +3,5 @@
 cd ~/.dotfiles || exit
 git pull
 git submodule update --init --recursive
-rbenv update
+asdf update
+adsf plugin-update --all
