@@ -1,15 +1,10 @@
 # Introduction
 
-Common *nix config files that I like to customize. 
+Common *nix config files that I like to customize.
 
-Also includes the following other tools (submodules unless *):
+Also includes the following other tools as submodules:
 
 - [hg-prompt](https://github.com/pelletier/hg-prompt)
-- [rbenv](https://github.com/sstephenson/rbenv)*
-- [rbenv-default-gems](https://github.com/sstephenson/rbenv-default-gems)
-- [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
-- [rbenv-update](https://github.com/rkh/rbenv-update)
-- [ruby-build](https://github.com/sstephenson/ruby-build)
 - [vim-flake8](https://github.com/nvie/vim-flake8)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 
@@ -20,18 +15,9 @@ Also includes the following other tools (submodules unless *):
 Global git dotfiles (such as user .gitconfig and .gitignore) are found in .gitdotfiles. Any git files found 
 in the repo root are files for configuing the repo specificly.
 
-## Rbenv
+## asdf
 
-This repo includes rbenv as a set of real folders and files, not as a submodule. This is because the rbenv
-repo gitignores the plugins folder, which prevents defining submodules in the plugins folder. 
-
-To allow for rbenv to still be updated, the rbenv-update plugin as has been added. 
-
-All of the plugins aresubmodules of this repo.
-
-## jEnv
-
-This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
+This repo will initialize [asdf](https://github.com/asdf-vm/asdf) if it is installed.
 
 # Dependencies
 
@@ -39,19 +25,6 @@ This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
 
 - [mercurial](http://mercurial.selenic.com/)
   `sudo apt-get install mercurial`
-
-## Node
- - [nvm](https://github.com/creationix/nvm)
-  `wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
-
-## Python
-
-- [pip](https://pip.pypa.io/en/latest/installing.html)
-  `wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py`
-- [virturlenv](http://virtualenv.readthedocs.org/)
-  `sudo pip install virtualenv`
-- [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/)
-  `sudo pip install virtualenvwrapper`
 
 ## Vim
 
@@ -66,11 +39,8 @@ This repo will initialize [jEnv](http://www.jenv.be/) if it is installed.
 # Installation
 
     cd ~
-    wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-    sudo apt-get install mercurial vim-gtk
-    sudo pip install virtualenv virtualenvwrapper flake8
-    nvm install stable && nvm alias default stable
+    sudo apt-get install --no-install-recommends vim-gtk make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
     git clone --recursive https://github.com/wbushey/dotfiles.git .dotfiles
 
 Edit ~/.bashrc --or-- ~/.bash_profile to include the following
@@ -98,10 +68,22 @@ Edit ~/.tmux.conf to include the following
 
     source-file ~/.dotfiles/tmux/tmux.conf
 
+Install language plugins for asdf:
+
+    adsf plugin-add java
+    adsf plugin-add nodejs
+    bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+    adsf plugin-add python
+    adsf plugin-add ruby
+    # Set tool versions in ~/.tool-versions
+
+Install flake8:
+
+    sudo pip install flake8
 
 # Updating
 
-Submodules are used to include many other projects. To update the included submodules, simple run the 
+Submodules are used to include many other projects. To update the included submodules, simple run the
 following in the repo
 
     cd ~/.dotfiles

@@ -34,7 +34,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages dotenv git-extras helm kubectl virtualenvwrapper vi-mode)
+plugins=(colored-man-pages dotenv git-extras helm kubectl vi-mode)
 
 # Load OS specific plugins
 if [[ $OS == 'MacOS' ]];then
@@ -69,8 +69,10 @@ fi
 
 unsetopt AUTO_CD
 
-source ~/.dotfiles/shell/shell.sh
+# Load version managers and custom convenience functions
+source ~/.dotfiles/shell/asdf.sh
 source ~/.dotfiles/shell/git.sh
-source ~/.dotfiles/shell/node.sh
-source ~/.dotfiles/shell/ruby.sh
-source ~/.dotfiles/shell/java.sh
+source ~/.dotfiles/shell/shell.sh
+#source ~/.dotfiles/shell/node.sh
+#source ~/.dotfiles/shell/ruby.sh
+#source ~/.dotfiles/shell/java.sh
