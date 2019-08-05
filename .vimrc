@@ -35,6 +35,9 @@ set list
 au BufNewFile,BufRead *.raml set filetype=yaml
 au BufNewFile,BufRead *.avsc set filetype=json
 
+" Spell checking
+au BufNewFile,BufRead *.md setlocal spell
+
 " Ctrl-P
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\.git$\|node_modules$\|target$\|vendor$\|_site$'
@@ -60,7 +63,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Java
-au FileType java setlocal ts=2 sts=2 sw=2
+au FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " JavaScript/CSS/SCSS
