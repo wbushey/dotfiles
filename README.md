@@ -21,11 +21,6 @@ This repo will initialize [asdf](https://github.com/asdf-vm/asdf) if it is insta
 
 # Dependencies
 
-## Mercurial
-
-- [mercurial](http://mercurial.selenic.com/)
-  `sudo apt-get install mercurial`
-
 ## Vim
 
 - [vim](http://www.vim.org/)
@@ -55,10 +50,6 @@ Edit ~/.gitconfig to include the following
 
     [include]
         path = ~/.dotfiles/.gitdotfiles/.gitconfig
-
-Edit ~/.hgrc to include the following
-
-    %include ~/.dotfiles/.hgdotfiles/.hgrc
 
 Edit ~/.vimrc to include the following
 
