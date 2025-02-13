@@ -39,7 +39,6 @@ plugins=(colored-man-pages docker docker-compose dotenv git-extras kubectl vi-mo
 
 # Load OS specific plugins
 if [[ $OS == 'MacOS' ]];then
-  plugins+=(osx)
 elif [[ $OS == 'Debian' ]]; then
   plugins+=(debian)
 elif [[ $OS == 'Ubuntu' ]]; then
@@ -71,9 +70,6 @@ fi
 unsetopt AUTO_CD
 
 # Load version managers and custom convenience functions
-source ~/.dotfiles/shell/asdf.sh
 source ~/.dotfiles/shell/git.sh
 source ~/.dotfiles/shell/shell.sh
 source ~/.dotfiles/shell/ruby.sh
-#source ~/.dotfiles/shell/node.sh
-#source ~/.dotfiles/shell/java.sh

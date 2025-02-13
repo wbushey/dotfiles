@@ -21,6 +21,11 @@ This repo will initialize [asdf](https://github.com/asdf-vm/asdf) if it is insta
 
 # Dependencies
 
+## asdf
+
+- [asdf](https://asdf-vm.com/)
+    - OS X: `brew install asdf`
+
 ## Mercurial
 
 - [mercurial](http://mercurial.selenic.com/)
