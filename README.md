@@ -44,8 +44,11 @@ This repo will initialize [asdf](https://github.com/asdf-vm/asdf) if it is insta
 # Installation
 
     cd ~
+    # For Debian based Linux
     sudo apt-get install --no-install-recommends vim-gtk make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
+    # For Arch based Linux
+    pamac install base-devel
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
     git clone --recursive https://github.com/wbushey/dotfiles.git .dotfiles
 
 Edit ~/.bashrc --or-- ~/.bash_profile to include the following
@@ -60,10 +63,6 @@ Edit ~/.gitconfig to include the following
 
     [include]
         path = ~/.dotfiles/.gitdotfiles/.gitconfig
-
-Edit ~/.hgrc to include the following
-
-    %include ~/.dotfiles/.hgdotfiles/.hgrc
 
 Edit ~/.vimrc to include the following
 
