@@ -70,6 +70,7 @@ fi
 unsetopt AUTO_CD
 
 # Load version managers and custom convenience functions
+source ~/.dotfiles/shell/asdf.sh
 source ~/.dotfiles/shell/git.sh
 source ~/.dotfiles/shell/shell.sh
 source ~/.dotfiles/shell/ruby.sh
