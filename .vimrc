@@ -15,6 +15,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
+Plug 'ericbn/vim-solarized'
 call plug#end()
 
 " Color and Display
